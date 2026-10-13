@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AIM'S AI — an early-stage personal AI assistant project focused on helpful, human-centered tools.">
+  <title>AIM'S AI | Personal AI Assistant</title>
+  <style>
+    :root { --bg:#0a1020; --panel:#111a30; --text:#edf3ff; --muted:#aab7d2; --accent:#71e0cf; --accent2:#8ca7ff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:radial-gradient(circle at 80% 0%,#18254a 0,transparent 35%),var(--bg); color:var(--text); line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1100px,92%); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:22px 0; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.08em; font-size:1.1rem; }
+    .brand span { color:var(--accent); }
+    nav { display:flex; gap:20px; flex-wrap:wrap; }
+    nav a { text-decoration:none; color:var(--muted); font-size:.95rem; }
+    nav a:hover { color:var(--accent); }
+    .hero { padding:80px 0 70px; display:grid; grid-template-columns:1.25fr .75fr; gap:50px; align-items:center; }
+    .tag { display:inline-block; border:1px solid #35556a; border-radius:999px; padding:5px 12px; color:var(--accent); font-size:.85rem; }
+    h1 { font-size:clamp(2.5rem,6vw,4.8rem); line-height:1.04; letter-spacing:-.05em; margin:18px 0; }
+    h1 em { color:var(--accent); font-style:normal; }
+    .lead { color:var(--muted); font-size:1.12rem; max-width:650px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-block; padding:12px 18px; border-radius:12px; font-weight:700; text-decoration:none; border:1px solid #435170; }
+    .primary { color:#06131b; background:var(--accent); border-color:var(--accent); }
+    .secondary { color:var(--text); background:transparent; }
+    .orb-card { min-height:300px; display:grid; place-items:center; background:linear-gradient(145deg,#172747,#0d1529); border:1px solid #293858; border-radius:28px; box-shadow:0 24px 70px #0005; position:relative; overflow:hidden; }
+    .orb { width:180px; height:180px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#e1fff9,#71e0cf 20%,#4b76b8 55%,#171d47 75%); box-shadow:0 0 50px #71e0cf66, inset -20px -20px 40px #070d25; animation:float 5s ease-in-out infinite; }
+    .orb:after { content:""; position:absolute; width:230px; height:70px; border:1px solid #71e0cf88; border-radius:50%; transform:rotate(-25deg); }
+    @keyframes float { 50% { transform:translateY(-10px); } }
+    section { padding:52px 0; }
+    .section-title { font-size:2rem; letter-spacing:-.03em; margin:0 0 10px; }
+    .sub { color:var(--muted); margin:0 0 26px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:#111a30cc; border:1px solid #283651; border-radius:18px; padding:22px; }
+    .card h3 { margin:0 0 8px; }
+    .card p { color:var(--muted); margin:0; }
+    .status { display:inline-block; font-size:.8rem; padding:4px 9px; border-radius:8px; background:#27344e; color:#c8d5ef; margin-bottom:12px; }
+    .about { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
+    .notice { border-left:3px solid var(--accent); padding:12px 16px; background:#111a30; color:var(--muted); border-radius:0 12px 12px 0; }
+    .contact { display:flex; gap:12px; flex-wrap:wrap; }
+    footer { border-top:1px solid #26324b; color:var(--muted); padding:25px 0 40px; font-size:.9rem; }
+    @media(max-width:760px) { .hero,.about { grid-template-columns:1fr; } .hero { padding-top:45px; } .orb-card { min-height:240px; } .grid { grid-template-columns:1fr; } header { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">AIM'S <span>AI</span></div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#focus">Focus</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="tag">Early-stage AI project</span>
+          <h1>A more helpful kind of <em>AI assistant.</em></h1>
+          <p class="lead">AIM'S AI is a personal AI assistant concept exploring practical, human-centered ways to make everyday digital tasks simpler. The project is in development, with an emphasis on useful features, clear communication, and responsible AI.</p>
+          <div class="actions">
+            <a class="btn primary" href="#focus">Explore the project</a>
+            <a class="btn secondary" href="#roadmap">View roadmap</a>
+          </div>
+        </div>
+        <div class="orb-card" aria-label="Abstract glowing AI orb illustration"><div class="orb"></div></div>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">About AIM'S AI</h2>
+        <p class="sub">A project being built step by step—not a finished product.</p>
+        <div class="about">
+          <div class="card">
+            <h3>The idea</h3>
+            <p>Create an assistant that can help people think through questions, organize tasks, and interact with technology in a more natural way.</p>
+          </div>
+          <div class="card">
+            <h3>Our approach</h3>
+            <p>Start with a small prototype, test it with real users, learn from feedback, and only then expand the feature set.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus">
+        <h2 class="section-title">Project focus</h2>
+        <p class="sub">Initial areas to explore. These are goals, not claims of features already launched.</p>
+        <div class="grid">
+          <article class="card"><span class="status">Planned</span><h3>Conversational help</h3><p>A clear chat experience for questions, explanations, and everyday problem-solving.</p></article>
+          <article class="card"><span class="status">Planned</span><h3>Personal productivity</h3><p>Simple tools for organizing tasks, notes, and repeatable workflows.</p></article>
+          <article class="card"><span class="status">Exploring</span><h3>Voice and interface</h3><p>Investigate accessible voice interaction and a friendly visual interface as the project develops.</p></article>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <h2 class="section-title">Roadmap</h2>
+        <p class="sub">A transparent plan for turning the concept into something useful.</p>
+        <div class="grid">
+          <article class="card"><h3>01 · Prototype</h3><p>Build a small working demo with one clearly defined use case.</p></article>
+          <article class="card"><h3>02 · Feedback</h3><p>Invite a small number of testers and document what helps or fails.</p></article>
+          <article class="card"><h3>03 · Improve</h3><p>Prioritize improvements based on actual use and reliability.</p></article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Follow the project</h2>
+        <p class="sub">This is an early-stage project. Contact details and public demos can be added when available.</p>
+        <div class="notice">No users, customers, funding, or launched features are claimed on this page. Update this section only when you have real information to share.</div>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> AIM'S AI · Early-stage project</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
